@@ -3,7 +3,7 @@ import scrapy
 class RedditbotSpider(scrapy.Spider):
     name = "redditbot"
     allowed_domains = ["www.reddit.com/r/gameofthrones/"]
-    start_urls = ["https://www.reddit.com/r/gameofthrones//"]
+    start_urls = ["https://www.reddit.com/r/Jcole/"]
 
     def parse(self, response):
         # Extract the content using css selectors

@@ -154,3 +154,23 @@ Run the spider using the following command:
 scrapy crawl redditbot
 ```
 
+## Exporting scraped data as a CSV File
+
+Getting all the data on the command line is nice, but as a data scientist, it is preferable to have data in certain formats like CSV, Excel, JSON, etc., that can be imported into programs. Scrapy provides this nifty little functionality where you can export the downloaded content in various formats. Many of the popular formats are already supported.
+
+Open the `settings.py` file and add the following code:
+
+```python
+# Export as CSV Feed
+FEED_FORMAT = "csv"
+FEED_URI = reddit.csv
+```
+
+- FEED_FORMAT: The format in which you want the data to be exported. Supported formats are: JSON, JSON lines, XML and CSV.
+- FEED_URI: The location of the exported file.
+
+Run the spider:
+
+```bash
+scrapy crawl redditbot
+```
